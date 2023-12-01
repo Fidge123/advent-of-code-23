@@ -1,0 +1,14 @@
+{
+  "name": "advent-of-code-23",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "advent-of-code-client": "^0.2.0"
+  }
+}
