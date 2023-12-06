@@ -7,12 +7,42 @@ const client = new AocClient({
   token: process.env.AOC_SESSION!,
 });
 
-function part1(input: string) {
-  return input;
+const races = [
+  {
+    time: 123,
+    distance: 321,
+  },
+];
+
+const race = {
+  time: 123456789,
+  distance: 1234567898765,
+};
+
+function part1() {
+  let result = 1;
+  for (const race of races) {
+    let wins = 0;
+    for (let time = 1; time < race.time; time++) {
+      console.log("Hold", time, "Drive", (race.time - time) * time);
+      if ((race.time - time) * time > race.distance) {
+        console.log("Winner");
+        wins += 1;
+      }
+    }
+    result *= wins;
+  }
+  return result;
 }
 
-function part2(input: string) {
-  return input;
+function part2() {
+  let wins = 0;
+  for (let time = 1; time < race.time; time++) {
+    if ((race.time - time) * time > race.distance) {
+      wins += 1;
+    }
+  }
+  return wins;
 }
 
 await client.run([part1 as PartFn, part2 as PartFn], false);
