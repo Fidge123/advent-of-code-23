@@ -60,7 +60,7 @@ function getGear(x: number, lines: any[]) {
 function part2(input: string) {
   return input
     .split("\n")
-    .map((line, i) => {
+    .map((line) => {
       const numbers = [];
       for (const match of line.matchAll(/\d+/gm)) {
         numbers.push({
