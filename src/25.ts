@@ -15,4 +15,6 @@ function part2(input: string) {
   return input;
 }
 
+console.log(part1(``));
+
 await client.run([part1 as PartFn, part2 as PartFn], false);
