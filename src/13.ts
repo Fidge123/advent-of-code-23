@@ -73,15 +73,11 @@ function part2(input: string) {
 
   return (
     patternsByRow
-      .map((pattern) =>
-        findSmugdedMirrorIndex(pattern, findMirrorIndex(pattern))
-      )
+      .map((p) => findSmugdedMirrorIndex(p, findMirrorIndex(p)))
       .reduce((sum, index) => sum + index, 0) *
       100 +
     patternsByCols
-      .map((pattern) =>
-        findSmugdedMirrorIndex(pattern, findMirrorIndex(pattern))
-      )
+      .map((p) => findSmugdedMirrorIndex(p, findMirrorIndex(p)))
       .reduce((sum, index) => sum + index, 0)
   );
 }
