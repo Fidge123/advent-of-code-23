@@ -177,17 +177,4 @@ function part2(input: string) {
   );
 }
 
-console.log(
-  part2(`.|...\\....
-|.-.\\.....
-.....|-...
-........|.
-..........
-.........\\
-..../.\\\\..
-.-.-/..|..
-.|....-|.\\
-..//.|....`)
-);
-
 await client.run([part1 as PartFn, part2 as PartFn], false);
